@@ -497,22 +497,24 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
         });
     </script>
 
-    <script>
+   <script>
+       
         $(document).ready(function () {
             setTimeout(function () {
+				$('#myModal').modal({backdrop: 'static', keyboard: false})
                 $('#myModal').modal('show');
             }, 0);
         });
-        	$('#myModal').modal({backdrop: 'static', keyboard: false})  	
+	  		
     </script>
 
     <!-- Custom JavaScript to close the modal -->
 <script>
     document.getElementById('closeButton').addEventListener('click', function() {
         $('#myModal').modal('hide');  // Close the modal programmatically
+		$('#myModal').modal({backdrop: 'show', keyboard: true})
     });
 </script>
-    
 
 </body>
 </html>
